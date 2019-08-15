@@ -15,3 +15,5 @@ RUN curl -L https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.t
 RUN source scl_source enable devtoolset-7 && source scl_source enable rh-python36 && CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/rh/rh-python36/root/usr/include/python3.6m/" ./bootstrap.sh
 
 RUN source scl_source enable devtoolset-7 && source scl_source enable rh-python36; CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/rh/rh-python36/root/usr/include/python3.6m/" ./b2 || echo "Warnings during build"
+
+RUN yum install -y llvm-toolset-7 llvm-toolset-7-cmake
