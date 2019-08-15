@@ -16,4 +16,6 @@ RUN source scl_source enable devtoolset-7 && source scl_source enable rh-python3
 
 RUN source scl_source enable devtoolset-7 && source scl_source enable rh-python36; CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/rh/rh-python36/root/usr/include/python3.6m/" ./b2 || echo "Warnings during build"
 
-RUN yum install -y epel-release cmake3
+RUN yum install -y epel-release
+
+RUN yum install -y cmake3
